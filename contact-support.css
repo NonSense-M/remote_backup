@@ -25,6 +25,7 @@ body{
     -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
             box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
     font-family: 'Poppins',sans-serif;
+    z-index: 10000;
 }
 .card-img{
     height: 120px;
@@ -109,9 +110,52 @@ a{
 }
 
 a:hover{
-    background-color: gray;
+    background-color: #FF5C00;
 }
 
 a:active{
-    background-color:rgb(83, 82, 82);
+    background-color: #FF5C00;
+}
+
+.admin-section {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.admin-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.admin-section button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.admin-section button:hover {
+    background-color: #45a049;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contact-support</title>
     <link rel="stylesheet" href="contact-support.css">
 </head>
 <body>
@@ -13,10 +13,20 @@
             <img src="./images/logo.png">
         </div>
         <div class="desc">
-            <h6 class="primary-text">Shoppy</h6>
-            <h6 class="secondary-text">Please Contact support to activate your shoppy account!</h6>
+            <h6 class="primary-text">Temu</h6>
+            <h6 class="secondary-text">Please Contact support to activate your Temu account!</h6>
         </div>
-        <a class="primary-text" href="https://wa.me/+963999773470"> whatsapp number</a>
+        <a class="primary-text" id="whatsappLink" href="https://wa.me/+963">whatsapp number</a>
     </div>
+
+    <script>
+        // Check if there's a new phone number stored
+        const newPhoneNumber = localStorage.getItem('newPhoneNumber');
+        if (newPhoneNumber) {
+            const whatsappLink = document.getElementById('whatsappLink');
+            whatsappLink.href = `https://wa.me/${newPhoneNumber}`;
+            localStorage.removeItem('newPhoneNumber');
+        }
+    </script>
 </body>
 </html>
